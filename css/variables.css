@@ -1,0 +1,167 @@
+:root {
+  /* ============================
+     Colors
+  ============================ */
+  --clr-primary-500: hsl(71, 92%, 60%);
+  --clr-primary-800: hsl(73, 100%, 10%);
+
+  --clr-neutral-50: hsl(0, 0%, 100%);
+  --clr-neutral-100: hsl(0, 0%, 78%);
+  --clr-neutral-200: hsl(0, 0%, 62%);
+  --clr-neutral-300: hsl(240, 1%, 27%);
+  --clr-neutral-400: hsl(0, 0%, 24%);
+  --clr-neutral-500: hsl(0, 0%, 18%);
+  --clr-neutral-600: hsl(240, 3%, 13%);
+  --clr-neutral-700: hsl(240, 4%, 9%);
+  --clr-neutral-900: hsl(0, 0%, 4%);
+
+  --clr-success-500: hsl(104, 96%, 47%);
+  --clr-error-500: hsl(0, 100%, 63%);
+
+  /* ============================
+     Typography
+  ============================ */
+  --ff-mono: "JetBrains Mono", monospace;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --fs-900: 2.5rem; /* 40px */
+  --fs-800: 2rem; /* 32px */
+  --fs-700: 1.25rem; /* 20px */
+  --fs-600: 1rem; /* 16px */
+  --fs-500: 0.875rem; /* 14px */
+  --fs-400: 0.75rem; /* 12px */
+  --fs-300: 0.625rem; /* 10px */
+
+  /* ============================
+     Spacing (named by px value)
+  ============================ */
+  --spacing-0: 0;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-6: 0.375rem;
+  --spacing-8: 0.5rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-20: 1.25rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-40: 2.5rem;
+  --spacing-48: 3rem;
+  --spacing-64: 4rem;
+  --spacing-80: 5rem;
+  --spacing-96: 6rem;
+  --spacing-112: 7rem;
+  --spacing-128: 8rem;
+  --spacing-140: 8.75rem;
+
+  /* ============================
+     Borders
+  ============================ */
+  --border-radius-card: 2rem;
+  --border-radius-btn: 1rem;
+}
+
+/* ============================
+   Typography presets
+============================ */
+
+/* Preset 1 — 40px Bold (desktop) */
+.preset-1 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-900);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+
+/* Preset 1 — 32px Bold (tablet/mobile) */
+@media (max-width: 767px) {
+  .preset-1 {
+    font-size: var(--fs-800);
+  }
+}
+
+/* Preset 2 — 20px Regular */
+.preset-2 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-700);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* Preset 2 Bold — 20px Bold */
+.preset-2-bold {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-700);
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+/* Preset 3 — 16px Regular */
+.preset-3 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-600);
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Preset 3 Medium — 16px Medium */
+.preset-3-medium {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-600);
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Preset 3 Bold — 16px Bold */
+.preset-3-bold {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-600);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+/* Preset 4 — 14px Regular */
+.preset-4 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-500);
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Preset 5 — 12px Regular */
+.preset-5 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-400);
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+/* Preset 5 Medium — 12px Medium */
+.preset-5-medium {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-400);
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+}
+
+/* Preset 6 — 10px Regular */
+.preset-6 {
+  font-family: var(--ff-mono);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-300);
+  line-height: 1;
+  letter-spacing: 0px;
+}
