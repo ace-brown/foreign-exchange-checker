@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -13,21 +18,27 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"
+    ></script>
+    <script defer src="./js/script.js"></script>
     <title>Frontend Mentor | FX Checker</title>
   </head>
   <body>
     <!-- Header -->
     <header class="container">
       <div class="header">
-        <span>logo</span>
-        <div>
-          <span>currencies</span>
-          <span>EOD</span>
-          <span>ECB data</span>
+        <span><img src="/assets/images/logo.svg" /></span>
+        <div class="preset-6 header-nav">
+          <ul>
+            <li>currencies</li>
+            <li>EOD</li>
+            <li>ECB data</li>
+          </ul>
         </div>
       </div>
     </header>
-    <!-- Brand logo — assets/images/logo.svg (the lockup already includes the "FX_CHECKER" wordmark; use alt="FX Checker") -->
 
     <!-- Live markets ticker — auto-scrolls across the page, pauses on hover -->
     <div class="live-market">
@@ -39,123 +50,90 @@
 
     <!-- Converter -->
     <div class="container">
-      <h3>Check the rate</h3>
-      <div class="converter-container">
-        <!-- Converter-main -->
-        <div class="converter-main--wrapper">
-          <!-- Converter Send -->
-          <div class="converter-main">
-            <div class="send-info">
-              <h4>Send</h4>
-              <h1>1,000</h1>
+      <div>
+        <h3>Check the rate</h3>
+        <div class="converter-container">
+          <!-- Converter-main -->
+          <div class="converter-main--wrapper">
+            <!-- Converter Send -->
+            <div class="converter-main">
+              <div class="send-info">
+                <h4>Send</h4>
+                <h1>1,000</h1>
+              </div>
+              <div class="send-currency-select">
+                <select>
+                  <option value="USD">USD</option>
+                  <option value="USDT">USDT</option>
+                </select>
+              </div>
             </div>
-            <div class="send-currency-select">
-              <select>
-                <option value="USD">USD</option>
-                <option value="USDT">USDT</option>
-              </select>
+            <!-- Converter Icon -->
+            <div class="converter-icon">Icon</div>
+            <!-- Converter Recieve -->
+            <div class="converter-main">
+              <div>
+                <h4>Recieve</h4>
+                <h1>1,000</h1>
+              </div>
+              <div>
+                <select>
+                  <option value="EUR">EUR</option>
+                  <option value="FR">FR</option>
+                </select>
+              </div>
             </div>
           </div>
-          <!-- Converter Icon -->
-          <div class="converter-icon">Icon</div>
-          <!-- Converter Recieve -->
-          <div class="converter-main">
-            <div>
-              <h4>Recieve</h4>
-              <h1>1,000</h1>
+          <!-- Converter-bottom-->
+          <div class="converter-bottom">
+            <p>1 Eueo = 0.893 USD</p>
+            <div class="converter-bottom-control">
+              <button>Favourite</button>
+              <button>Log Conversion</button>
             </div>
-            <div>
-              <select>
-                <option value="EUR">EUR</option>
-                <option value="FR">FR</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <!-- Converter-bottom-->
-        <div class="converter-bottom">
-          <p>1 Eueo = 0.893 USD</p>
-          <div class="converter-bottom-control">
-            <button>Favourite</button>
-            <button>Log Conversion</button>
           </div>
         </div>
       </div>
+
+      <!-- History  -->
+      <select class="history-select">
+        <option value="history">History</option>
+      </select>
+
+      <div class="stats">
+        <div class="stats-cards">
+          <!-- Open -->
+          <div class="stats-card">
+            <p class="preset-4">Open</p>
+            <p class="preset-2">0.8943</p>
+          </div>
+          <!-- Last -->
+          <div class="stats-card">
+            <p class="preset-4">Last</p>
+            <p class="preset-2">0.8943</p>
+          </div>
+          <!-- Change -->
+          <div class="stats-card">
+            <p class="preset-4">Change</p>
+            <p class="preset-2">0.8943</p>
+          </div>
+          <!-- % Change -->
+          <div class="stats-card">
+            <p class="preset-4">% Change</p>
+            <p class="preset-2">0.8943</p>
+          </div>
+        </div>
+        <ul class="stats-timeline">
+          <li><span data-range="1D">1D</span></li>
+          <li><span data-range="1W">1W</span></li>
+          <li><span data-range="1M">1M</span></li>
+          <li><span data-range="3M">3M</span></li>
+          <li><span data-range="1Y">1Y</span></li>
+          <li><span data-range="6Y">6Y</span></li>
+        </ul>
+      </div>
+      <!-- Price chart -->
+      <div id="chart">this is chat</div>
     </div>
-
-    Search currencies... Popular
-    <!-- Dynamic: number of popular currencies -->
-    <!-- Dynamic: popular currencies, each row: flag, code, name (a checkmark marks the selected one) -->
-
-    Other currencies
-    <!-- Dynamic: number of other currencies -->
-    <!-- Dynamic: every other currency, each row: flag, code, name -->
-
-    <!-- Dynamic: while searching, the list filters to the currencies matching the query -->
-
-    <!-- Tabs — collapse into a dropdown on mobile -->
-
-    History Compare Favorites
-    <!-- Dynamic: number of favorited pairs (badge) -->
-    Log
-    <!-- Dynamic: number of logged conversions (badge) -->
-
-    <!-- Tab panel: History (default tab) -->
-
-    Open
-    <!-- Dynamic: opening rate for the selected range -->
-    Last
-    <!-- Dynamic: latest rate -->
-    Change
-    <!-- Dynamic: change over the range (signed; positive green, negative red) -->
-    % change
-    <!-- Dynamic: percentage change over the range (▲/▼; positive green, negative red) -->
-
-    <!-- Date range selector -->
-    1d 1w 1m 3m 1y 5y
-
-    <!-- Dynamic: active pair, e.g. "USD/EUR" -->
-    <!-- Dynamic: latest rate and timestamp, e.g. "0.8530 · May 14 16:00 CET" -->
-    <!-- Dynamic: line + area chart of the pair's rate history, with Y-axis (high/mid/low) and X-axis date labels -->
-
-    <!-- History empty / error state -->
-    No chart data available We couldn't load rate history for [pair] right now.
-    This usually clears up in a minute.
-
-    <!-- Tab panel: Compare -->
-
-    Multi-currency
-    <!-- Dynamic: send amount and base currency, e.g. "1,000 from USD" -->
-    <!-- Dynamic: number of comparison rows, e.g. "8 pairs" -->
-
-    <!-- Dynamic: one row per currency, each: flag, code, name, converted amount, reference rate (e.g. "@ 0.7366"), and a star to pin/unpin -->
-
-    <!-- Compare empty state -->
-    No comparison available Enter an amount in Send above to see what your money
-    is worth in other currencies.
-
-    <!-- Tab panel: Favorites (pinned pairs, saved in the browser) -->
-
-    Pinned pairs
-    <!-- Dynamic: number of pinned pairs, e.g. "10 favorites" -->
-
-    <!-- Dynamic: one row per pinned pair, each: pair (e.g. "USD → EUR"), live rate, 24h change %, and a filled star to unpin -->
-
-    <!-- Favorites empty state -->
-    No pinned pairs yet Pin a pair to track its rate here. Tap the star icon on
-    any conversion or comparison row.
-
-    <!-- Tab panel: Log (conversion history, saved in the browser) -->
-
-    Conversion log
-    <!-- Dynamic: number of logged conversions, e.g. "8 logged" -->
-    Clear all
-
-    <!-- Dynamic: one row per logged conversion, each: relative time (e.g. "20m", "1h", "13 May"), pair, send amount, receive amount, and a delete button -->
-
-    <!-- Log empty state -->
-    No conversions logged yet Every conversion is recorded here automatically
-    when you tap Log conversion. Your log is private to this session and this
-    browser.
   </body>
 </html>
