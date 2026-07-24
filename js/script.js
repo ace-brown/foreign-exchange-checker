@@ -1,3 +1,6 @@
+// ============================== Live markets ==========================
+
+// ============================== Chart ==========================
 const chartEl = document.getElementById("chart");
 
 const chart = LightweightCharts.createChart(chartEl, {
@@ -68,3 +71,7 @@ chart.timeScale().fitContent();
 window.addEventListener("resize", () => {
   chart.applyOptions({ with: chartEl.clientWidth });
 });
+
+// ============================== Chart ==========================
+
+// ============================== Chart ==========================
