@@ -1,4 +1,12 @@
 // ============================== Live markets ==========================
+const rates = [
+  { pair: "USD/JPY", price: "157.91", change: "+0.64%", direction: "up" },
+  { pair: "GBP/USD", price: "1.3579", change: "-0.22%", direction: "down" },
+  { pair: "USD/CHF", price: "0.9998", change: "+0.13%", direction: "up" },
+  { pair: "EUR/GBP", price: "0.8633", change: "+0.11%", direction: "up" },
+  { pair: "AUD/USD", price: "0.7288", change: "+0.08%", direction: "up" },
+  { pair: "USD/CAD", price: "1.3815", change: "+0.04%", direction: "up" },
+];
 
 // ============================== Chart ==========================
 const chartEl = document.getElementById("chart");

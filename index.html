@@ -41,13 +41,88 @@
     </header>
 
     <!-- Live markets ticker — auto-scrolls across the page, pauses on hover -->
-    <div class="live-market">
-      <div>Live markets</div>
-      <div class="price-bar">
-        <span class="preset-6" id="currency-pair">USD/JPY</span>
-        <span class="preset-6" id="price">197.7</span>
-        <span class="preset-6 indicator up" id="indicator"></span>
-        <span class="preset-6" id="indicator">+1.2%</span>
+    <div class="live-market" id="live-market">
+      <div class="live-dot-wrap">
+        <spa class="live-dot"></spa>
+        <span class="preset-6">LIVE MARKETS</span>
+      </div>
+      <div class="ticker-viewport">
+        <div class="price-bar" id="price-bar">
+          <!-- items injected by JS, duplicated for seamless loop -->
+          <div class="preset-6 price-item">
+            <span class="pair">ASD/UDD</span>
+            <span class="price">1</span>
+            <span class="indicator"></span>
+            <span class="price-change">+14</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">BSD/UDD</span>
+            <span class="price">2</span>
+            <span class="indicator"></span>
+            <span class="price-change">-24</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">CSD/UDD</span>
+            <span class="price">3</span>
+            <span class="indicator"></span>
+            <span class="price-change">-32</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">DSD/UDD</span>
+            <span class="price">4</span>
+            <span class="indicator"></span>
+            <span class="price-change">+4</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">ESD/UDD</span>
+            <span class="price">5</span>
+            <span class="indicator"></span>
+            <span class="price-change">+53</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">FSD/UDD</span>
+            <span class="price">6</span>
+            <span class="indicator"></span>
+            <span class="price-change">68</span>
+          </div>
+          <!-- items injected by JS, duplicated for seamless loop -->
+          <div class="preset-6 price-item">
+            <span class="pair">ASD/UDD</span>
+            <span class="price">1</span>
+            <span class="indicator"></span>
+            <span class="price-change">+14</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">BSD/UDD</span>
+            <span class="price">2</span>
+            <span class="indicator"></span>
+            <span class="price-change">-24</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">CSD/UDD</span>
+            <span class="price">3</span>
+            <span class="indicator"></span>
+            <span class="price-change">-32</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">DSD/UDD</span>
+            <span class="price">4</span>
+            <span class="indicator"></span>
+            <span class="price-change">+4</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">ESD/UDD</span>
+            <span class="price">5</span>
+            <span class="indicator"></span>
+            <span class="price-change">+53</span>
+          </div>
+          <div class="preset-6 price-item">
+            <span class="pair">FSD/UDD</span>
+            <span class="price">6</span>
+            <span class="indicator"></span>
+            <span class="price-change">68</span>
+          </div>
+        </div>
       </div>
     </div>
 
