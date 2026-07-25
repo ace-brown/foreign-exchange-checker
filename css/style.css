@@ -66,6 +66,10 @@ body {
   overflow: hidden;
 }
 
+.ticker-viewport:hover .price-bar {
+  animation-play-state: paused;
+}
+
 .price-bar {
   display: flex;
   align-items: stretch;

@@ -8,6 +8,20 @@ const rates = [
   { pair: "USD/CAD", price: "1.3815", change: "+0.04%", direction: "up" },
 ];
 
+const priceBar = document.getElementById("price-bar");
+
+function renderPriceItem(rate) {
+  return `
+    <div class="preset-6 price-item">
+        <span class="pair">${rate.pair}</span>
+        <span class="price">${rate.price}</span>
+        <span class="indicator ${rate.direction}"></span>
+        <span class="price-change ${rate.direction}">${rate.change}</span>
+    </div>
+  `;
+}
+
+renderPriceItem(rates);
 // ============================== Chart ==========================
 const chartEl = document.getElementById("chart");
 
